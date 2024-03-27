@@ -1,0 +1,42 @@
+version : "3.1"
+nlu:
+- intent: start
+  examples : |
+    - 안녕하세요
+    - 실례합니다
+    - 이보세요
+    - 너는 누구니
+    - 주문을 하고 싶어
+    - 대답
+    - 주문 받아라
+    - 주문하려고 하는데요
+    - 저는 앞이 보이지 않습니다
+    - 나는 시각 장애인이야
+    - 커피를 시키고 싶어
+    - Hey
+    - Hello
+    - 잠시만요
+    - 자리 있나요
+    - 실례합니다
+    - 주문 받아라
+    - 주문을 하고 싶어요
+    - 이봐라
+    - 주문할게요
+    - 주문을 하고 싶어
+
+- intent: menu_list
+  examples : |
+    - 메뉴를 알려줘
+    - 어떤 메뉴가 있나요
+  
+
+# https://rasa.com/blog/introducing-entity-roles-and-groups/ 
+- intent: menu_order
+  examples : |
+    - [아이스아메리카노]{"entity" : "menu"} 주세요
+    - [아아]{"entity" : "menu" , "group" : "1"} [한잔]("entity" : "counts", "group" : 1)요
+    - [아이스티]{"entity" : "menu" , "group" : "1"} [세잔]("entity" : "counts", "group" : 1) 이랑 [케이크]{"entity" : "menu" , "group" : "2"}  [하나]{"entity" : "menu" , "group" : "2"} 요
+    
+     
+
+

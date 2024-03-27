@@ -1,0 +1,37 @@
+version : "3.1"
+#https://learning.rasa.com/archive/conversational-ai-2/basic-forms/ 
+
+
+forms:
+  order_form:
+    required_slots:
+      menu_name:
+      - entity: menu
+        type : from_entity
+      menu_counts:
+      - entity: counts
+        type : from_entity
+
+slots:
+  menu_name:
+    type: text
+    influence_conversation: true
+  menu_counts:
+    type: text
+    influence_conversation: true
+
+entities:
+  - menu
+  - counts
+
+
+intents:
+  - start
+  - menu_list
+  - menu_description
+  - menu_order
+
+response:
+  ordered:
+  - text: 주문이 접수되었습니다!
+
