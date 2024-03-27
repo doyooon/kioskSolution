@@ -35,7 +35,7 @@ nlu:
   examples : |
     - [아이스아메리카노]{"entity" : "menu"} 주세요
     - [아아]{"entity" : "menu" , "group" : "1"} [한잔]("entity" : "counts", "group" : 1)요
-    - [아이스티]{"entity" : "menu" , "group" : "1"} [세잔]("entity" : "counts", "group" : "1") 이랑 [케이크]{"entity" : "menu" , "group" : "2"}  [하나]{"entity" : "menu" , "group" : "2"} 요
+    - [아이스티]{"entity" : "menu" , "group" : "1"} [세잔]("entity" : "counts", "group" : "1") 이랑 [케이크]{"entity" : "menu" , "group" : "2"}  [하나]{"entity" : "counts" , "group" : "2"} 요
     
      
 
