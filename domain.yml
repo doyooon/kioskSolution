@@ -39,12 +39,7 @@ intents:
   - request/menu_description
   - request/ordered_list
   - request/lost
-  - order/only_menu
-  - order/only_count
-  - order/only_size
-  - order/menu_count
-  - order/menu_size
-  - order/count_size
+  - order
   - pay
   - undo
   - end
