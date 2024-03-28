@@ -25,6 +25,7 @@ slots:
 
 
 entities:
+  - menu_type
   - menu
   - size
   - count
