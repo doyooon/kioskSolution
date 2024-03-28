@@ -1,0 +1,25 @@
+stories:
+- story: cafe_order  # name of the story - just for debugging
+  steps:
+  - intent: start                         
+  - action: utter_greet
+
+  - intent: request/menu_type
+  - action: utter_decribe_menu_type
+
+  - intent: request/menu_list
+  - action: utter_decribe_menu_list
+
+  - intent: order
+  - action: utter_want_to_drink_order
+  - action: utter_ask_size
+  - action: utter_ask_count
+
+  - intent: confirm
+  - action: utter_confirm_order
+
+  - intent: pay
+  - action: utter_ask_pay
+
+  - intent: end
+  - action: utter_end
