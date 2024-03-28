@@ -63,7 +63,7 @@ responses:
   utter_did_that_help:
   - text : "도움이 필요 하신가요?
   utter_end:
-  - text : "주무니 완료 되었습니다."
+  - text : "주문이 완료 되었습니다."
   utter_confirm_order:
-  - text: 주문 하신 으ㅡㅁ료 {menu}{size} 사이즈 {count}잔 맞으신가요?
+  - text: 주문 하신 음료 {menu}{size} 사이즈 {count}잔 맞으신가요?
 
