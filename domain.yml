@@ -1,15 +1,43 @@
 version : "3.1"
 
 slots:
+  menu_name:
+    type: text
+    influence_conversation: True
+
+  size:
+    type: categorical
+    influence_conversation: True
+    values:
+    - tall
+    - grande
+    - venti
+
+  count:
+    type: float
+    influence_conversation: True
+    min_value: 1.0
+    max_Value: 100.0
+
+  order_dic_list:
+    type: list
+    auto_fill: ture
+
 
 entities:
   - menu
   - size
   - count
 
-
 intents:
   - start
+  - request/menu_list
+  - request/location
+  - request/time
+  - request/menu_recommend
+  - request/menu_description
+  - request/ordered_list
+  - request/lost
   - order/only_menu
   - order/only_count
   - order/only_size
@@ -24,7 +52,11 @@ responses:
   utter_ask_take_out:
   - text: "포장이신가요? 드시고 가시나요?
   utter_ask_size:
-  - text : "사이즈는 어떤 걸로 하시겠어요"
+    - condition:
+      - type: slot
+        name : size
+        value : False
+        text : "사이즈는 어떤 걸로 하시겠어요"
   utter_did_that_help:
   - text : "도움이 필요 하신가요?
   utter_end:
