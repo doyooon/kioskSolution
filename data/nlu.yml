@@ -101,7 +101,7 @@ nlu:
   
 
 # https://rasa.com/blog/introducing-entity-roles-and-groups/ 
-- intent: menu_order
+- intent: order
   examples : |
     - [아이스아메리카노]{"entity" : "menu"} 주세요
     - [아아]{"entity" : "menu" , "group" : "1"} [한잔]("entity" : "counts", "group" : 1)요
