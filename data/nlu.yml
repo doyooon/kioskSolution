@@ -28,6 +28,8 @@ nlu:
   examples : |
     - 메뉴를 알려줘
     - 어떤 메뉴가 있나요
+    - [커피]{"entity": "menu_type"} 메뉴에는 어떤게 있니
+    - [에이드]{"entity" : "menu_type"} 메뉴에는 어떤게 있니
 
 - intent : request/menu_recommend
 
@@ -99,9 +101,28 @@ nlu:
   examples: | 
     - 분실물이 있나요?
   
-
 # https://rasa.com/blog/introducing-entity-roles-and-groups/ 
-- intent: order
+- intent: order/only_menu
+  examples : |
+    -
+- intent: order/only_count
+  examples : |
+    -
+    -
+- intent: order/only_size
+  examples : |
+    -
+- intent: order/menu_count
+  examples : |
+    - 
+- intent: order/menu_size
+  examples : |
+    - 
+
+- intent: order/count_size
+  examples : |
+    - 
+  
   examples : |
     - [아이스아메리카노]{"entity" : "menu"} 주세요
     - [아아]{"entity" : "menu" , "group" : "1"} [한잔]("entity" : "counts", "group" : 1)요
