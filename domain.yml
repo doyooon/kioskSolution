@@ -44,7 +44,9 @@ intents:
   - order/menu_count
   - order/menu_size
   - order/count_size
-  - payment
+  - pay
+  - undo
+  - end
   
 responses:
   utter_want_to_drink_order:
