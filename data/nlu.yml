@@ -102,26 +102,9 @@ nlu:
     - 분실물이 있나요?
   
 # https://rasa.com/blog/introducing-entity-roles-and-groups/ 
-- intent: order/only_menu
+- intent: order
   examples : |
     -
-- intent: order/only_count
-  examples : |
-    -
-    -
-- intent: order/only_size
-  examples : |
-    -
-- intent: order/menu_count
-  examples : |
-    - 
-- intent: order/menu_size
-  examples : |
-    - 
-
-- intent: order/count_size
-  examples : |
-    - 
   
   examples : |
     - [아이스아메리카노]{"entity" : "menu"} 주세요
