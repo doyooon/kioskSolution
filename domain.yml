@@ -4,10 +4,14 @@ slots:
   menu_name:
     type: text
     influence_conversation: True
+    mappings:
+    - type: custom
 
   size:
     type: categorical
     influence_conversation: True
+    mappings:
+    - type: custom
     values:
     - tall
     - grande
@@ -16,12 +20,16 @@ slots:
   count:
     type: float
     influence_conversation: True
+    mappings:
+    - type: custom
     min_value: 1.0
-    max_Value: 100.0
+    max_value: 100.0
 
   order_dic_list:
     type: list
-    auto_fill: ture
+    mappings:
+    - type: custom
+      #auto_fill: True
 
 
 entities:
@@ -46,17 +54,17 @@ intents:
   
 responses:
   utter_ask_size:
-    - conditon:
-        - type: slot
-          name: size
-          value: False
-      text: "{menu_name} 사이즈는 어떤 걸로 하시겠어요?"
+#    - conditon:
+#        - type: slot
+#          name: size
+#          value: False
+    - text: "{menu_name} 사이즈는 어떤 걸로 하시겠어요?"
   utter_ask_count:
-    - conditon:
-        - type: slot
-          name: count
-          value: False
-      text: "{menu_name}은 몇잔 주문 하시겠어요?"
+          #    - conditon:
+          #        - type: slot
+          #          name: count
+          #          value: False
+    - text: "{menu_name}은 몇잔 주문 하시겠어요?"
   
   utter_greet:
     - text: "반갑습니다. 주문부터 하세요."
