@@ -83,7 +83,7 @@ responses:
   utter_ask_size:
   - text: "어떤 사이즈를 원하시나요"
   utter_ask_count:
-  - text: "몇개 드릴까요?"d
+  - text: "몇개 드릴까요?"
   utter_confirm_order:
   - text: "주문 내역 확인해주세요"
   utter_ask_pay:
