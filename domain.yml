@@ -1,36 +1,35 @@
-version : "3.1"
+version: "3.1"
 
 slots:
   menu_name:
     type: text
     influence_conversation: True
     mappings:
-    - type: custom
+      - type: custom
 
   size:
     type: categorical
     influence_conversation: True
     mappings:
-    - type: custom
+      - type: custom
     values:
-    - tall
-    - grande
-    - venti
+      - tall
+      - grande
+      - venti
 
   count:
     type: float
     influence_conversation: True
     mappings:
-    - type: custom
+      - type: custom
     min_value: 1.0
     max_value: 100.0
 
   order_dic_list:
     type: list
     mappings:
-    - type: custom
-      #auto_fill: True
-
+      - type: custom
+        #auto_fill: True
 
 entities:
   - menu_type
@@ -51,21 +50,21 @@ intents:
   - pay
   - undo
   - end
-  
+
 responses:
   utter_ask_size:
-#    - conditon:
-#        - type: slot
-#          name: size
-#          value: False
+    #    - conditon:
+    #        - type: slot
+    #          name: size
+    #          value: False
     - text: "{menu_name} 사이즈는 어떤 걸로 하시겠어요?"
   utter_ask_count:
-          #    - conditon:
-          #        - type: slot
-          #          name: count
-          #          value: False
+    #    - conditon:
+    #        - type: slot
+    #          name: count
+    #          value: False
     - text: "{menu_name}은 몇잔 주문 하시겠어요?"
-  
+
   utter_greet:
     - text: "반갑습니다. 주문부터 하세요."
   utter_end:
@@ -78,3 +77,9 @@ responses:
     - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
   utter_cheer_up:
     - text: "화이팅입니다."
+  utter_did_that_help:
+    - text: "어떻게 도와드릴까요?"
+  utter_happy:
+    - text: "행복해요."
+  utter_goodbye:
+    - text: "안녕히가세요"
