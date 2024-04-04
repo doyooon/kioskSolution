@@ -3,7 +3,6 @@ stories:
   steps:
   - intent: start                         
   - action: utter_greet
-
   - intent: request/menu_type
   - action: utter_decribe_menu_type
 

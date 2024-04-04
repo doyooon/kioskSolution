@@ -24,6 +24,14 @@ nlu:
       - 주문할게요
       - 주문을 하고 싶어
 
+  - intent: request/menu_type
+    examples: |
+      - 매뉴 종류 알려줘
+      - 메뉴 종류
+      - 메뉴 어떤 거 있어요?
+      - 메뉴
+      - 메뉴판
+
   - intent: request/menu_list
     examples: |
       - 메뉴를 알려줘
