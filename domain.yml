@@ -42,6 +42,7 @@ intents:
   - mood_unhappy
   - mood_great
   - greet
+  - deny
   - request/menu_list
   - request/location
   - request/time
