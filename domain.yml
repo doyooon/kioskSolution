@@ -39,6 +39,7 @@ entities:
 
 intents:
   - start
+  - greet
   - request/menu_list
   - request/location
   - request/time

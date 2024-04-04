@@ -1,150 +1,147 @@
-version : "3.1"
+version: "3.1"
 nlu:
-- intent: start
-  examples : |
-    - 안녕하세요
-    - 실례합니다
-    - 이보세요
-    - 너는 누구니
-    - 주문을 하고 싶어
-    - 대답
-    - 주문 받아라
-    - 주문하려고 하는데요
-    - 저는 앞이 보이지 않습니다
-    - 나는 시각 장애인이야
-    - 커피를 시키고 싶어
-    - Hey
-    - Hello
-    - 잠시만요
-    - 자리 있나요
-    - 실례합니다
-    - 주문 받아라
-    - 주문을 하고 싶어요
-    - 이봐라
-    - 주문할게요
-    - 주문을 하고 싶어
+  - intent: greet
+    examples: |
+      - 안녕하세요
+      - 실례합니다
+      - 이보세요
+      - 너는 누구니
+      - 주문을 하고 싶어
+      - 대답
+      - 주문 받아라
+      - 주문하려고 하는데요
+      - 저는 앞이 보이지 않습니다
+      - 나는 시각 장애인이야
+      - 커피를 시키고 싶어
+      - Hey
+      - Hello
+      - 잠시만요
+      - 자리 있나요
+      - 실례합니다
+      - 주문 받아라
+      - 주문을 하고 싶어요
+      - 이봐라
+      - 주문할게요
+      - 주문을 하고 싶어
 
-- intent: request/menu_list
-  examples : |
-    - 메뉴를 알려줘
-    - 어떤 메뉴가 있나요
-    - [커피]{"entity": "menu_type"} 메뉴에는 어떤게 있니
-    - [에이드]{"entity" : "menu_type"} 메뉴에는 어떤게 있니
+  - intent: request/menu_list
+    examples: |
+      - 메뉴를 알려줘
+      - 어떤 메뉴가 있나요
+      - [커피]{"entity": "menu_type"} 메뉴에는 어떤게 있니
+      - [에이드]{"entity" : "menu_type"} 메뉴에는 어떤게 있니
 
-- intent : request/menu_recommend
+  - intent: request/menu_recommend
 
+  - intent: request/orderlist
+    examples: |
+      - 선택된 메뉴를 확인할래요
+      - 장바구니
+      - 담긴거 보여줘
+      - 선택된 거 보여줘
+      - 우리가 지금 몇개 주문했지?
+      - 지금까지 고른 메뉴가 뭐예요?
+      - 주문한 음식 목록을 보여주세요
+      - 선택한 메뉴 리스트를 보여주세요
+      - 주문한 음식을 확인할 수 있을까요?
 
-- intent: request/orderlist
-  examples: |
-    - 선택된 메뉴를 확인할래요
-    - 장바구니
-    - 담긴거 보여줘
-    - 선택된 거 보여줘
-    - 우리가 지금 몇개 주문했지?
-    - 지금까지 고른 메뉴가 뭐예요?
-    - 주문한 음식 목록을 보여주세요
-    - 선택한 메뉴 리스트를 보여주세요
-    - 주문한 음식을 확인할 수 있을까요?
+  - intent: request/menu_description
+    examples: |
+      - [아메리카노]{"entity": "menu"}에 대해 설명해주세요
+      - [카페라떼]{"entity": "menu"}에 대해서 알려주세요
+      - [아이스티]{"entity": "menu"}는 달아?
+      - [카푸치노]{"entity": "menu"} 뜨거운 거 밖에 안되나?
+      - [딸기 스무디]{"entity": "menu"}에 대해 알려주세요
+      - [블루베리 요거트 스무디]{"entity": "menu"}가 뭐에요?
+      - [그린티 프라푸치노]{"entity": "menu"}에 는 시원해?
+      - [플레인 베이글]{"entity": "menu"}이 어떤 건가요?
+      - [토마토 샌드위치]{"entity": "menu"}에 뭐가 들어가?
+      - [크로와상]{"entity": "menu"} 설명 좀 부탁해요
+      - [아보카도 샐러드]{"entity": "menu"}가 뭐에요?
+      - [크림 치즈 케이크]{"entity": "menu"}에 대해 알려주세요
+      - [딸기 타르트]{"entity": "menu"} 설명 부탁해요
 
-- intent: request/menu_description
-  examples: |
-    - [아메리카노]{"entity": "menu"}에 대해 설명해주세요
-    - [카페라떼]{"entity": "menu"}에 대해서 알려주세요
-    - [아이스티]{"entity": "menu"}는 달아?
-    - [카푸치노]{"entity": "menu"} 뜨거운 거 밖에 안되나?
-    - [딸기 스무디]{"entity": "menu"}에 대해 알려주세요
-    - [블루베리 요거트 스무디]{"entity": "menu"}가 뭐에요?
-    - [그린티 프라푸치노]{"entity": "menu"}에 는 시원해?
-    - [플레인 베이글]{"entity": "menu"}이 어떤 건가요?
-    - [토마토 샌드위치]{"entity": "menu"}에 뭐가 들어가?
-    - [크로와상]{"entity": "menu"} 설명 좀 부탁해요
-    - [아보카도 샐러드]{"entity": "menu"}가 뭐에요?
-    - [크림 치즈 케이크]{"entity": "menu"}에 대해 알려주세요
-    - [딸기 타르트]{"entity": "menu"} 설명 부탁해요
-  
+  - intent: request/time
+    examples: |
+      - 오늘 영업 시간이 어떻게 되나요?
+      - 몇시까지 영업해?
+      - 몇 시까지 영업하나요?
+      - 주말에는 영업해?
+      - 몊시에 문열어
+      - 몊시에 문 닫아?
+      - 가게 영업 시간을 알려주세요
+      - 가게 영업 시간
+      - 문 닫는 시간
+      - 영업 시간이 어떻게 되나요?
+      - 여기는 언제 영업하나요?
+      - 영업 시간을 알려주세요
 
-- intent: request/time
-  examples : |
-    - 오늘 영업 시간이 어떻게 되나요?
-    - 몇시까지 영업해?
-    - 몇 시까지 영업하나요?
-    - 주말에는 영업해?
-    - 몊시에 문열어
-    - 몊시에 문 닫아?
-    - 가게 영업 시간을 알려주세요
-    - 가게 영업 시간
-    - 문 닫는 시간
-    - 영업 시간이 어떻게 되나요?
-    - 여기는 언제 영업하나요?
-    - 영업 시간을 알려주세요
-    
-- intent: request/location
-  examples : |
-    - [화장실]{"entity": "facility"}이 어디에 있나요?
-    - [흡연실]{"entity": "facility"}이 어디에 있나요?
-    - [음료대]{"entity": "facility"}가 어디에 있나요?
-    - [주차장]{"entity": "facility"}이 어디에 있나요?
-    - [ATM]{"entity": "facility"}이 어디에 있나요?
-    - [출입구]{"entity": "facility"}가 어디에 있나요?
-    - [엘리베이터]{"entity": "facility"}가 어디에 있나요?
-    - [카운터]{"entity": "facility"}가 어디에 있나요?
-    - [정류장]{"entity": "facility"}이 어디에 있나요?
-    - [무료 와이파이]{"entity": "facility"}가 어디에 있나요?
-    - [장애인 화장실]{"entity": "facility"}이 어디에 있나요?
-    - [음식점]{"entity": "facility"}이 어디에 있나요?
-    - [회의실]{"entity": "facility"}이 어디에 있나요?
-    - [주차장]{"entity": "facility"}은 어디에 있나요?
-    - [카페]{"entity": "facility"}가 어디에 있나요?
-    - [로비]{"entity": "facility"}가 어디에 있나요?
+  - intent: request/location
+    examples: |
+      - [화장실]{"entity": "facility"}이 어디에 있나요?
+      - [흡연실]{"entity": "facility"}이 어디에 있나요?
+      - [음료대]{"entity": "facility"}가 어디에 있나요?
+      - [주차장]{"entity": "facility"}이 어디에 있나요?
+      - [ATM]{"entity": "facility"}이 어디에 있나요?
+      - [출입구]{"entity": "facility"}가 어디에 있나요?
+      - [엘리베이터]{"entity": "facility"}가 어디에 있나요?
+      - [카운터]{"entity": "facility"}가 어디에 있나요?
+      - [정류장]{"entity": "facility"}이 어디에 있나요?
+      - [무료 와이파이]{"entity": "facility"}가 어디에 있나요?
+      - [장애인 화장실]{"entity": "facility"}이 어디에 있나요?
+      - [음식점]{"entity": "facility"}이 어디에 있나요?
+      - [회의실]{"entity": "facility"}이 어디에 있나요?
+      - [주차장]{"entity": "facility"}은 어디에 있나요?
+      - [카페]{"entity": "facility"}가 어디에 있나요?
+      - [로비]{"entity": "facility"}가 어디에 있나요?
 
-- intent: lost
-  examples: | 
-    - 분실물이 있나요?
-  
-# https://rasa.com/blog/introducing-entity-roles-and-groups/ 
-- intent: order
-  examples : |
-    - [아이스아메리카노]{"entity" : "menu"} 주세요
-    - [아아]{"entity" : "menu" , "group" : "1"} [한잔]("entity" : "counts", "group" : 1)요
-    - [아이스티]{"entity" : "menu" , "group" : "1"} [세잔]("entity" : "counts", "group" : "1") 이랑 [케이크]{"entity" : "menu" , "group" : "2"}  [하나]{"entity" : "counts" , "group" : "2"} 요
-  
+  - intent: lost
+    examples: |
+      - 분실물이 있나요?
 
-- intent: undo
-  examples: |
-    - 주문 취소해줘
-    - 아니다 방금꺼 취소해줘
-    - 이전으로 돌아가고 싶어
-    - 방금 주문을 취소해주세요
-    - 이전 선택을 취소하고 싶어요
+  # https://rasa.com/blog/introducing-entity-roles-and-groups/
+  - intent: order
+    examples: |
+      - [아이스아메리카노]{"entity" : "menu"} 주세요
+      - [아아]{"entity" : "menu" , "group" : "1"} [한잔]("entity" : "counts", "group" : 1)요
+      - [아이스티]{"entity" : "menu" , "group" : "1"} [세잔]("entity" : "counts", "group" : "1") 이랑 [케이크]{"entity" : "menu" , "group" : "2"}  [하나]{"entity" : "counts" , "group" : "2"} 요
 
-- intent: end
-  examples: |
-    - 일단 좀 더 생각해볼게
-    - 다음 사람 먼저 받아줘
-    - 다음에 올게
-    - 여기까지 주문할게요
-    - 주문 끝내겠습니다
-    - 이제 그만 주문할게요
+  - intent: undo
+    examples: |
+      - 주문 취소해줘
+      - 아니다 방금꺼 취소해줘
+      - 이전으로 돌아가고 싶어
+      - 방금 주문을 취소해주세요
+      - 이전 선택을 취소하고 싶어요
 
-- intent: pay
-  examples: |
-    - 주문을 마쳐줘
-    - 그만 주문할래
-    - 주문 완료할게
-    - 결제할게요
-    - 계산해주세요
-    - 지불하고 싶어요
-    - 카드
-    - 현금
-    - 계산
-    - 결제
-    - 카드 결제
-    - 결제할게
-    - 계산해줘
-    - 지불하고 싶어
-    - 카드로 계산할게
-    - 현금으로 계산할게
-    - 계산하러 왔어
-    - 결제 원해
-    - 이걸로 계산할게
-    - 카드로 결제 부탁해
+  - intent: end
+    examples: |
+      - 일단 좀 더 생각해볼게
+      - 다음 사람 먼저 받아줘
+      - 다음에 올게
+      - 여기까지 주문할게요
+      - 주문 끝내겠습니다
+      - 이제 그만 주문할게요
+
+  - intent: pay
+    examples: |
+      - 주문을 마쳐줘
+      - 그만 주문할래
+      - 주문 완료할게
+      - 결제할게요
+      - 계산해주세요
+      - 지불하고 싶어요
+      - 카드
+      - 현금
+      - 계산
+      - 결제
+      - 카드 결제
+      - 결제할게
+      - 계산해줘
+      - 지불하고 싶어
+      - 카드로 계산할게
+      - 현금으로 계산할게
+      - 계산하러 왔어
+      - 결제 원해
+      - 이걸로 계산할게
+      - 카드로 결제 부탁해
