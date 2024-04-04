@@ -94,14 +94,6 @@ responses:
   utter_want_to_drink_order:
     - text: "물로 드릴까요?"
 
-  utter_ask_size:
-    - text: "어떤 사이즈를 원하시나요"
-
-  utter_ask_count:
-    - text: "몇개 드릴까요?"
-
-  utter_confirm_order:
-    - text: "주문 내역 확인해주세요"
 
   utter_ask_pay:
     - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
