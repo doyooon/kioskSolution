@@ -53,38 +53,55 @@ intents:
 
 responses:
   utter_ask_size:
-  - text: "{menu_name} 사이즈는 어떤 걸로 하시겠어요?"
+    - text: "{menu_name} 사이즈는 어떤 걸로 하시겠어요?"
+
   utter_ask_count:
-  - text: "{menu_name}은 몇잔 주문 하시겠어요?"
+    - text: "{menu_name}은 몇잔 주문 하시겠어요?"
+
   utter_greet:
-  - text: "반갑습니다. 주문부터 하세요."
+    - text: "반갑습니다. 주문부터 하세요."
+
   utter_end:
-  - text: "주문이 완료되었습니다."
+    - text: "주문이 완료되었습니다."
+
   utter_confirm_order:
-  - text: "주문확인 해드리겠습니다. {menu_name} {size} {count}잔 맞으신가요?"
+    - text: "주문확인 해드리겠습니다. {menu_name} {size} {count}잔 맞으신가요?"
+
   utter_ask_add_order:
-  - text: "추가로 주문 하실 게 있으신가요?"
+    - text: "추가로 주문 하실 게 있으신가요?"
+
   utter_ask_payment:
-  - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
+    - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
+
   utter_cheer_up:
-  - text: "화이팅입니다."
+    - text: "화이팅입니다."
+
   utter_did_that_help:
-  - text: "어떻게 도와드릴까요?"
+    - text: "어떻게 도와드릴까요?"
+
   utter_happy:
-  - text: "행복해요."
+    - text: "행복해요."
+
   utter_goodbye:
-  - text: "안녕히가세요"
+    - text: "안녕히가세요"
+
   utter_decribe_menu_type:
-  - text: "주문 가능 종류로는 커피, 케잌이 있습니다"
+    - text: "주문 가능 종류로는 커피, 케잌이 있습니다"
+
   utter_decribe_menu_list:
-  - text: "커피, 사이다가 있습니다."
+    - text: "커피, 사이다가 있습니다."
+
   utter_want_to_drink_order:
-  - text: "물로 드릴까요?"
+    - text: "물로 드릴까요?"
+
   utter_ask_size:
-  - text: "어떤 사이즈를 원하시나요"
+    - text: "어떤 사이즈를 원하시나요"
+
   utter_ask_count:
-  - text: "몇개 드릴까요?"
+    - text: "몇개 드릴까요?"
+
   utter_confirm_order:
-  - text: "주문 내역 확인해주세요"
+    - text: "주문 내역 확인해주세요"
+
   utter_ask_pay:
-  - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
+    - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
