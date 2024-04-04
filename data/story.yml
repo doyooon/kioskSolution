@@ -22,3 +22,9 @@ stories:
 
   - intent: end
   - action: utter_end
+- story: cafe_order2  # name of the story - just for debugging
+  steps:
+  - intent: start                         
+  - action: utter_greet
+  - intent: end
+  - action: utter_end
