@@ -76,4 +76,5 @@ responses:
     - text: "추가로 주문 하실 게 있으신가요?"
   utter_ask_payment:
     - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
-
+  utter_cheer_up:
+    - text: "화이팅입니다."
