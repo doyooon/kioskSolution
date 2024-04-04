@@ -53,18 +53,9 @@ intents:
 
 responses:
   utter_ask_size:
-    #    - conditon:
-    #        - type: slot
-    #          name: size
-    #          value: False
     - text: "{menu_name} 사이즈는 어떤 걸로 하시겠어요?"
   utter_ask_count:
-    #    - conditon:
-    #        - type: slot
-    #          name: count
-    #          value: False
     - text: "{menu_name}은 몇잔 주문 하시겠어요?"
-
   utter_greet:
     - text: "반갑습니다. 주문부터 하세요."
   utter_end:
