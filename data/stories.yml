@@ -1,25 +1,17 @@
 version: "3.1"
 
 stories:
-
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: basic order
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: order
+      - action: order_form
+      - active_loop: order_form
+      - action: utter_confirm_order
+      - intent: confirm
+      - action: utter_ask_payment
+      - intent: pay
+      - action: utter_end
+      - action: action_deactivate_loop
+      - active_loop: null
