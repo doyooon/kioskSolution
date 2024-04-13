@@ -5,37 +5,52 @@ slots:
     type: text
     influence_conversation: True
     mappings:
-      - type: custom
+      - type: from_entity
+        entity: menu
 
   size:
     type: categorical
     influence_conversation: True
-    mappings:
-      - type: custom
     values:
       - tall
       - grande
       - venti
+    mappings:
+      - type: from_entity
+        entity: size
 
   count:
     type: float
     influence_conversation: True
-    mappings:
-      - type: custom
     min_value: 1.0
     max_value: 100.0
+    mappings:
+      - type: from_entity
+        entity: count
 
   order_dic_list:
     type: list
     mappings:
       - type: custom
-        #auto_fill: True
 
 entities:
   - menu_type
   - menu
   - size
   - count
+
+forms:
+  order_form:
+    required_slots:
+      menu_name:
+        - type: from_entity
+          entity: menu
+      size:
+        - type: from_entity
+          entity: size
+      count:
+        - type: from_entity
+          entity: count
 
 intents:
   - start
