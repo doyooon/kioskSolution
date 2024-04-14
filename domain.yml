@@ -1,14 +1,14 @@
 version: "3.1"
 
 slots:
-  - menu:
+  menu:
     type: text
     influence_conversation: True
     mappings:
       - type: from_entity
         entity: menu
 
-  - size:
+  size:
     type: categorical
     influence_conversation: True
     values:
@@ -19,7 +19,7 @@ slots:
       - type: from_entity
         entity: size
 
-  - count:
+  count:
     type: float
     influence_conversation: True
     min_value: 1
@@ -28,14 +28,14 @@ slots:
       - type: from_entity
         entity: count
   
-  - order:
+  order:
     type: custom
     influence_conversation: True
     mappings:
       - type: from_entity
         entity: order
         
-  - is_hot:
+  is_hot:
     type: categorical
     influence_conversation: True
     values:
@@ -45,7 +45,7 @@ slots:
       - type: from_entity
         entity: is_hot
         
-  - order_list:
+  order_list:
     type: list
     mappings:
       - type: custom
