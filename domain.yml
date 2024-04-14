@@ -29,7 +29,7 @@ slots:
         entity: count
   
   order:
-    type: custom
+    type: any
     influence_conversation: True
     mappings:
       - type: from_entity
