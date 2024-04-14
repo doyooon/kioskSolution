@@ -28,10 +28,10 @@ slots:
       - type: from_entity
         entity: count
 
-  order_dic_list:
-    type: list
-    mappings:
-      - type: custom
+  # order_dic_list:
+  #   type: list
+  #   mappings:
+  #     - type: custom
 
 entities:
   - menu_type
@@ -42,79 +42,46 @@ entities:
 forms:
   order_form:
     required_slots:
-      menu_name:
-        - type: from_entity
-          entity: menu
-      size:
-        - type: from_entity
-          entity: size
-      count:
-        - type: from_entity
-          entity: count
+      - menu_name
+      - size
+      - count
 
 intents:
-  - start
-  - mood_unhappy
-  - affirm
-  - mood_great
   - greet
-  - deny
-  - confirm
-  - request/menu_list
-  - request/location
-  - request/time
-  - request/menu_recommend
-  - request/menu_description
-  - request/ordered_list
-  - request/lost
+  - request
   - order
   - pay
+  - cancel
   - undo
-  - end
 
 responses:
-  utter_ask_size:
-    - text: "{menu_name} 사이즈는 어떤 걸로 하시겠어요?"
-
-  utter_ask_count:
-    - text: "{menu_name}은 몇잔 주문 하시겠어요?"
-
   utter_greet:
-    - text: "반갑습니다. 주문부터 하세요."
+    - text: "반갑습니다. 주문부탁드려요"
+    - text: "안녕하세요, 무엇을 도와 드릴까요"
+    - text: "환영합니다"
+
+  utter_request/order_list:
+    - text: "지금까지 주문하신 음료들은..."
+
+  utter_request/time:
+    - text: "마감시감은 새벽 1시입니다"
+    - text: "오픈 시간은 오전 10시 입니다"
+  
+  utter_request/location_toilet:
+    - text: "화장실은 오른쪽에 있습니다"
+
+  utter_order:
+    - text: "네, 주문내역에 추가해둘게요"
+
+  utter_pay:
+    - text: "계산 도와드리겠습니다"
+
+  utter_cancel:
+    - text: "주문이 취소되었습니다"
+
+  utter_undo:
+  - text: "방금 주문하신 메뉴가 취소되었습니다"
 
   utter_end:
-    - text: "주문이 완료되었습니다."
+  - text: "안녕히 가세요"
 
-  utter_confirm_order:
-    - text: "주문확인 해드리겠습니다. {menu_name} {size} {count}잔 맞으신가요?"
-
-  utter_ask_add_order:
-    - text: "추가로 주문 하실 게 있으신가요?"
-
-  utter_ask_payment:
-    - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
-
-  utter_cheer_up:
-    - text: "화이팅입니다."
-
-  utter_did_that_help:
-    - text: "어떻게 도와드릴까요?"
-
-  utter_happy:
-    - text: "행복해요."
-
-  utter_goodbye:
-    - text: "안녕히가세요"
-
-  utter_decribe_menu_type:
-    - text: "주문 가능 종류로는 커피, 케잌이 있습니다"
-
-  utter_decribe_menu_list:
-    - text: "커피, 사이다가 있습니다."
-
-  utter_want_to_drink_order:
-    - text: "물로 드릴까요?"
-
-
-  utter_ask_pay:
-    - text: "주문 확인 되셨습니다. 결제는 어떻게 하시나요?"
