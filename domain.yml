@@ -1,7 +1,7 @@
 version: "3.1"
 
 slots:
-  menu_name:
+  menu:
     type: text
     influence_conversation: True
     mappings:
@@ -22,29 +22,41 @@ slots:
   count:
     type: float
     influence_conversation: True
-    min_value: 1.0
-    max_value: 100.0
+    min_value: 1
+    max_value: 100
     mappings:
       - type: from_entity
         entity: count
-
-  # order_dic_list:
-  #   type: list
-  #   mappings:
-  #     - type: custom
+  
+  order:
+    type: custom
+    influence_conversation: True
+    mappings:
+      - type: from_entity
+        entity: order
+        
+  is_hot:
+    type: categorical
+    influence_conversation: True
+    values:
+      - hot
+      - ice
+    mappings:
+      - type: from_entity
+        entity: is_hot
+        
+  order_list:
+    type: list
+    mappings:
+      - type: custom
 
 entities:
-  - menu_type
   - menu
   - size
   - count
+  - order
+  - is_hot
 
-forms:
-  order_form:
-    required_slots:
-      - menu_name
-      - size
-      - count
 
 intents:
   - greet
