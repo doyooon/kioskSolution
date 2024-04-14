@@ -28,12 +28,7 @@ slots:
       - type: from_entity
         entity: count
   
-  order:
-    type: any
-    influence_conversation: True
-    mappings:
-      - type: from_entity
-        entity: order
+
         
   is_hot:
     type: categorical
@@ -50,7 +45,6 @@ entities:
   - menu
   - size
   - count
-  - order
   - is_hot
 
 
