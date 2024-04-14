@@ -44,11 +44,7 @@ slots:
     mappings:
       - type: from_entity
         entity: is_hot
-        
-  order_list:
-    type: list
-    mappings:
-      - type: custom
+
 
 entities:
   - menu
