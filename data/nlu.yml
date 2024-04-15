@@ -62,15 +62,45 @@ nlu:
       - 목마른데 물 좀 주세요.
   - intent: order
     examples: |
-      - [아이스](is_hot)[아메리카노](name)[한 잔](count) 주세요.
-      - [아메리카노](name) [tall](size) size 주세요.
-      - [아](is_hot)[아](name) 주세요.
-      - [tall](size)
-      - [grande](size)
-      - [venti](size)
-      - [아메리카노](name)
-      - [카페라떼](name)
-      - [빅맥](name)
+      - [아메리카노](menu)
+      - [카페라떼](menu)
+      - [따뜻](is_hot)한거
+      - [뜨거운](is_hot)
+      - [하나](count)
+      - [둘](count)
+      - [셋](count)
+      - [넷](count)
+      - [다섯](count)
+      - [야섯](count)
+      - [한](count)
+      - [두](count)
+      - [세](count)
+      - [네](count)
+      - [한](count)잔
+      - [두](count)잔
+      - [세](count)잔
+      - [네](count)잔
+      - [한](count)개
+      - [두](count)개
+      - [세](count)개
+      - [네](count)개
+      - [톨](size)
+      - [그란데](size)
+      - [벤티](size)
+      - [아메리카노](menu)
+      - [카페라떼](menu)
+      - 제일 [큰](size) 거 주세요
+      - [작은](size) 거 주세요
+      - [마카롱](menu)[네](count)개 주세요.
+      - [케이크](menu)[한](count)개 주세요.
+      - [아메리카노](menu) [톨](size) 사이즈 주세요.
+      - [아이스](is_hot) [아메리카노](menu) [한](count) 잔 주세요.
+      - [아이스](is_hot) [아메리카노](menu) [두](count) 잔 주세요.
+      - [아이스](is_hot) [아메리카노](menu) [세](count) 잔 주세요.
+      - [아이스](is_hot) [아메리카노](menu) [네](count) 잔 주세요.
+      - [뜨거](is_hot)운 [밀크티](menu) [톨](size) [한](count)개 [그란데](size) [세](count) 잔 주세요.
+      - [차가](is_hot)운 [아메리카노](menu) [톨](size) [두](count)잔 [그란데](size) [다섯](count) 잔주세요.
+      
   - intent: pay
     examples: |
       - 주문을 마쳐줘
@@ -108,3 +138,55 @@ nlu:
       - 이전으로 돌아가고 싶어
       - 방금 주문을 취소해주세요
       - 이전 선택을 취소하고 싶어요
+
+  - lookup: menu
+    examples: |
+      - 아메리카노
+      - 카페라떼
+      - 플랫화이트
+      - 디카페인 아메리카노
+      - 숏블랙
+      - 딸기라떼
+      - 초콜릿라떼
+      - 밀크티
+      - 제주말차라떼
+      - 허니자몽아이스티
+      - 복숭아아이스티
+      - 레몬에이드
+      - 청포도에이드
+      - 얼그레이티
+      - 카모마일 허브차
+      - 디카페인 카페라떼
+      - 바나나라떼
+      - 오렌지주스
+      - 에스프레소
+  - lookup: size
+    examples: |
+      - 그란데
+      - 톨
+      - 벤티
+      - 작은
+      - 큰
+  - lookup: count
+    examples: |
+      - 한잔
+      - 한개
+      - 하나
+      - 둘
+      - 두잔
+      - 두개
+      - 셋
+      - 세잔
+      - 세개
+      - 넷
+      - 네잔
+      - 네개
+      - 다섯
+      - 다섯개
+      - 다섯잔
+      - 여섯
+      - 여섯잔
+      - 여섯개
+      - 일곱
+      - 일곱개
+      - 일곱잔
