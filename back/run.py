@@ -1,6 +1,7 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, render_template, request, jsonify
 from subprocess import call
 from flask_socketio import SocketIO, send
+from http import HTTPStatus
 
 
 app = Flask(__name__)
@@ -27,6 +28,34 @@ def request(message):
     # emit("response", {'data': message['data'], 'username': session['username']}, broadcast=True)
     send(to_client, broadcast=True)
 
+# RESTApi
+# Create a URL route in our application for "/"
+@app.route('/users/<user_id>’', methods = ['GET', 'POST', 'DELETE'])
+def user(user_id):
+    if request.method == 'GET':
+         userId = request.args.get('user_id')
+    if request.method == 'POST':
+        data = request.form # a multidict containing POST data
+    if request.method == 'DELETE':
+        userId = request.args.get('user_id')
+    else:
+        # Error 405 Method Not Allowed
+        None
+
+data = {
+    "menu" : "임시",
+    "count" : 1,
+    "size" : "tall",
+    "temp" : "ice"
+}
+
+@app.route("/api/hello")
+def hello():
+    return "Hello world!"
+
+@app.route("/api/order")
+def get_order():
+    return jsonify({"data" : data, "status" : HTTPStatus.OK})
 
 if __name__ == '__main__':
-  socket_io.run(app, debug=True, port=9999)
+  socket_io.run(app, debug=True, port=8080)
